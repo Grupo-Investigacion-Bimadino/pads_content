@@ -9,7 +9,7 @@ export class FormatService {
   }
 
   findAll() {
-    return `This action returns all format`;
+    return `This action returns all formats`;
   }
 
   findOne(id: number) {
@@ -22,5 +22,9 @@ export class FormatService {
 
   remove(id: number) {
     return `This action removes a #${id} format`;
+  }
+
+  partialUpdate(id: number, updateFormatDto: UpdateFormatDto) {
+    return `This action partially updates a #${id} format`;
   }
 }

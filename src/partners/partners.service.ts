@@ -23,4 +23,8 @@ export class PartnersService {
   remove(id: number) {
     return `This action removes a #${id} partner`;
   }
+
+  partialUpdate(id: number, updatePartnerDto: UpdatePartnerDto) {
+    return `This action partially updates a #${id} partner`;
+  }
 }

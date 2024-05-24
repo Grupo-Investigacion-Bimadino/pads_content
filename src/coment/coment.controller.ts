@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { ComentService } from './coment.service';
 import { CreateComentDto } from './dto/create-coment.dto';
 import { UpdateComentDto } from './dto/update-coment.dto';
@@ -22,9 +22,14 @@ export class ComentController {
     return this.comentService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Put(':id') // Método PUT para actualizar el recurso completo
   update(@Param('id') id: string, @Body() updateComentDto: UpdateComentDto) {
     return this.comentService.update(+id, updateComentDto);
+  }
+
+  @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
+  partialUpdate(@Param('id') id: string, @Body() updateComentDto: UpdateComentDto) {
+    return this.comentService.partialUpdate(+id, updateComentDto);
   }
 
   @Delete(':id')

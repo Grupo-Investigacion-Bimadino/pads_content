@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { PartnersService } from './partners.service';
 import { CreatePartnerDto } from './dto/create-partner.dto';
 import { UpdatePartnerDto } from './dto/update-partner.dto';
@@ -22,9 +22,14 @@ export class PartnersController {
     return this.partnersService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Put(':id') // Método PUT para actualizar el recurso completo
   update(@Param('id') id: string, @Body() updatePartnerDto: UpdatePartnerDto) {
     return this.partnersService.update(+id, updatePartnerDto);
+  }
+
+  @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
+  partialUpdate(@Param('id') id: string, @Body() updatePartnerDto: UpdatePartnerDto) {
+    return this.partnersService.partialUpdate(+id, updatePartnerDto);
   }
 
   @Delete(':id')

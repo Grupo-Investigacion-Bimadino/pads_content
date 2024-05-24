@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { TeamService } from './team.service';
 import { CreateTeamDto } from './dto/create-team.dto';
 import { UpdateTeamDto } from './dto/update-team.dto';
@@ -22,9 +22,14 @@ export class TeamController {
     return this.teamService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Put(':id') // Método PUT para actualizar el recurso completo
   update(@Param('id') id: string, @Body() updateTeamDto: UpdateTeamDto) {
     return this.teamService.update(+id, updateTeamDto);
+  }
+
+  @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
+  partialUpdate(@Param('id') id: string, @Body() updateTeamDto: UpdateTeamDto) {
+    return this.teamService.partialUpdate(+id, updateTeamDto);
   }
 
   @Delete(':id')

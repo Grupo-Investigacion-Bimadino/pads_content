@@ -4,6 +4,7 @@ import { UpdateContentDto } from './dto/update-content.dto';
 
 @Injectable()
 export class ContentService {
+  
   create(createContentDto: CreateContentDto) {
     return 'This action adds a new content';
   }
@@ -23,4 +24,7 @@ export class ContentService {
   remove(id: number) {
     return `This action removes a #${id} content`;
   }
+  partialUpdate(id: number, updateContentDto: UpdateContentDto) {
+    return `This action partially updates a #${id} content`;
+}
 }

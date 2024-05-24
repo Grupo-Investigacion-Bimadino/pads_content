@@ -9,7 +9,7 @@ export class TeamService {
   }
 
   findAll() {
-    return `This action returns all team`;
+    return `This action returns all teams`;
   }
 
   findOne(id: number) {
@@ -22,5 +22,9 @@ export class TeamService {
 
   remove(id: number) {
     return `This action removes a #${id} team`;
+  }
+
+  partialUpdate(id: number, updateTeamDto: UpdateTeamDto) {
+    return `This action partially updates a #${id} team`;
   }
 }
