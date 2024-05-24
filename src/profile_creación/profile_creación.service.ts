@@ -4,6 +4,9 @@ import { UpdateProfileCreaciónDto } from './dto/update-profile_creación.dto';
 
 @Injectable()
 export class ProfileCreaciónService {
+  partialUpdate(arg0: number, updateProfileCreaciónDto: UpdateProfileCreaciónDto) {
+    throw new Error('Method not implemented.');
+  }
   create(createProfileCreaciónDto: CreateProfileCreaciónDto) {
     return 'This action adds a new profileCreación';
   }
