@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "25e92c0f-27e7-426f-8acc-034b3950564b",
+		"name": "pads_content",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21928053"
+	},
+	"item": [
+		{
+			"name": "content",
+			"item": [
+				{
+					"name": "content",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  \r\n    {\r\n      \"type\": \"presentation\",\r\n      \"format\": \"PowerPoint\",\r\n      \"title\": \"Introduction to Biology\",\r\n      \"description\": \"A PowerPoint presentation covering the basics of biology.\",\r\n      \"size\": \"2MB\",\r\n      \"edition_type\": \"first\"\r\n    }\r\n   \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/content/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"content",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"type\": \"presentation\",\r\n    \"format\": \"PowerPoint\",\r\n    \"title\": \"Introduction to Biology\",\r\n    \"description\": \"A PowerPoint presentation covering the basics of biology.\",\r\n    \"size\": \"2MB\",\r\n    \"edition_type\": \"first\"\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"type\": \"video\",\r\n    \"format\": \"MP4\",\r\n    \"title\": \"Photosynthesis Process\",\r\n    \"description\": \"A video explaining the process of photosynthesis.\",\r\n    \"size\": \"500MB\",\r\n    \"edition_type\": \"HD\"\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"type\": \"document\",\r\n    \"format\": \"PDF\",\r\n    \"title\": \"Math Exercises\",\r\n    \"description\": \"A PDF document containing various math exercises.\",\r\n    \"size\": \"1MB\",\r\n    \"edition_type\": \"standard\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/content/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"content",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "content",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"type\": \"presentation\",\r\n    \"format\": \"Google Slides\",\r\n    \"title\": \"Chemical Reactions\",\r\n    \"description\": \"An educational presentation on chemical reactions.\",\r\n    \"size\": \"1.5MB\",\r\n    \"edition_type\": \"first\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/content/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"content",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "content",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"size\": \"3MB\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/content/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"content",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "content",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/content/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"content",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coment",
+			"item": [
+				{
+					"name": "coment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coment/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"ID\": 1,\r\n    \"fecha_creacion\": \"2024-05-23\",\r\n    \"comentario\": \"Este es el primer comentario.\",\r\n    \"id_usuario\": 12345\r\n  },\r\n  {\r\n    \"ID\": 2,\r\n    \"fecha_creacion\": \"2024-05-24\",\r\n    \"comentario\": \"Este es el segundo comentario.\",\r\n    \"id_usuario\": 54321\r\n  },\r\n  {\r\n    \"ID\": 3,\r\n    \"fecha_creacion\": \"2024-05-25\",\r\n    \"comentario\": \"Este es el tercer comentario.\",\r\n    \"id_usuario\": 98765\r\n  },\r\n  {\r\n    \"ID\": 4,\r\n    \"fecha_creacion\": \"2024-05-26\",\r\n    \"comentario\": \"Este es el cuarto comentario.\",\r\n    \"id_usuario\": 13579\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coment/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 3,\r\n    \"fecha_creacion\": \"2024-05-28\",\r\n    \"comentario\": \"Este es el sexto comentario.\",\r\n    \"id_usuario\": 97531\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coment/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coment",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuario\": 789654\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coment/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coment",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
