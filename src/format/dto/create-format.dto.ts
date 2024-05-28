@@ -1,1 +1,3 @@
-export class CreateFormatDto {}
+export class CreateFormatDto {
+  format_type: string;
+}

@@ -1,1 +1,4 @@
-export class CreatePartnerDto {}
+export class CreatePartnerDto {
+  email: string;
+  password: string;
+}

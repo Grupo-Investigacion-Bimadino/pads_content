@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Put,
+} from '@nestjs/common';
 import { FormatService } from './format.service';
 import { CreateFormatDto } from './dto/create-format.dto';
 import { UpdateFormatDto } from './dto/update-format.dto';
@@ -28,7 +37,10 @@ export class FormatController {
   }
 
   @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
-  partialUpdate(@Param('id') id: string, @Body() updateFormatDto: UpdateFormatDto) {
+  partialUpdate(
+    @Param('id') id: string,
+    @Body() updateFormatDto: UpdateFormatDto,
+  ) {
     return this.formatService.partialUpdate(+id, updateFormatDto);
   }
 
