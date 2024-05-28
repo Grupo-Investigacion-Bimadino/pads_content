@@ -9,22 +9,49 @@ export class ProfileCreaciónService {
   }
 
   findAll() {
-    return `This action returns all profileCreación`;
+    return [
+      {
+        id: 1,
+        email: 'profile1@hotmail.com',
+        password: 'password1@',
+        role: 'admin',
+      },
+      {
+        id: 2,
+        email: 'profile2@hotmail.com',
+        password: 'pass0909@',
+        role: 'teacher',
+      },
+      {
+        id: 1,
+        email: 'profile3@hotmail.com',
+        password: 'passw7865@',
+        role: 'student',
+      },
+    ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} profileCreación`;
+    return {
+      id: 1,
+      email: 'profile3@hotmail.com',
+      password: 'passw7865@',
+      role: 'student',
+    };
   }
 
   update(id: number, updateProfileCreaciónDto: UpdateProfileCreaciónDto) {
-    return `This action updates a #${id} profileCreación`;
+    return updateProfileCreaciónDto;
   }
 
   remove(id: number) {
     return `This action removes a #${id} profileCreación`;
   }
 
-  partialUpdate(id: number, updateProfileCreaciónDto: UpdateProfileCreaciónDto) {
-    return `This action partially updates a #${id} profileCreación`;
+  partialUpdate(
+    id: number,
+    updateProfileCreaciónDto: UpdateProfileCreaciónDto,
+  ) {
+    return updateProfileCreaciónDto;
   }
 }

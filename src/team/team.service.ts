@@ -9,15 +9,39 @@ export class TeamService {
   }
 
   findAll() {
-    return `This action returns all teams`;
+    return [
+      {
+        id: 1,
+        short_name: 'JMBC',
+        details: 'detail1234',
+        owners: 'so and so',
+      },
+      {
+        id: 2,
+        short_name: 'LIMAV',
+        details: 'Lorem ipsum dolor',
+        owners: 'so and so',
+      },
+      {
+        id: 3,
+        short_name: 'TICMAC',
+        details: 'Mitral core',
+        owners: 'so and so',
+      },
+    ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} team`;
+    return {
+      id: 1,
+      short_name: 'JMBC',
+      details: 'detail1234',
+      owners: 'so and so',
+    };
   }
 
   update(id: number, updateTeamDto: UpdateTeamDto) {
-    return `This action updates a #${id} team`;
+    return updateTeamDto;
   }
 
   remove(id: number) {
@@ -25,6 +49,6 @@ export class TeamService {
   }
 
   partialUpdate(id: number, updateTeamDto: UpdateTeamDto) {
-    return `This action partially updates a #${id} team`;
+    return updateTeamDto;
   }
 }

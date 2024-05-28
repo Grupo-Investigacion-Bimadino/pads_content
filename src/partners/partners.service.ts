@@ -9,15 +9,35 @@ export class PartnersService {
   }
 
   findAll() {
-    return `This action returns all partners`;
+    return [
+      {
+        id: 1,
+        email: 'example123@gmail.com',
+        password: 'exam092312',
+      },
+      {
+        id: 2,
+        email: 'ejemplo456@gmail.com',
+        password: 'eje236789',
+      },
+      {
+        id: 3,
+        email: 'database2@gmail.com',
+        password: 'daba789@',
+      },
+    ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} partner`;
+    return {
+      id: 2,
+      email: 'ejemplo456@gmail.com',
+      password: 'eje236789',
+    };
   }
 
   update(id: number, updatePartnerDto: UpdatePartnerDto) {
-    return `This action updates a #${id} partner`;
+    return updatePartnerDto;
   }
 
   remove(id: number) {
@@ -25,6 +45,6 @@ export class PartnersService {
   }
 
   partialUpdate(id: number, updatePartnerDto: UpdatePartnerDto) {
-    return `This action partially updates a #${id} partner`;
+    return updatePartnerDto;
   }
 }

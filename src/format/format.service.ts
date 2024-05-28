@@ -9,15 +9,31 @@ export class FormatService {
   }
 
   findAll() {
-    return `This action returns all formats`;
+    return [
+      {
+        id: 1,
+        format_type: 'presentation',
+      },
+      {
+        id: 2,
+        format_type: 'video',
+      },
+      {
+        id: 3,
+        format_type: 'ppxt',
+      },
+    ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} format`;
+    return {
+      id: 1,
+      format_type: 'presentation',
+    };
   }
 
   update(id: number, updateFormatDto: UpdateFormatDto) {
-    return `This action updates a #${id} format`;
+    return updateFormatDto;
   }
 
   remove(id: number) {
@@ -25,6 +41,6 @@ export class FormatService {
   }
 
   partialUpdate(id: number, updateFormatDto: UpdateFormatDto) {
-    return `This action partially updates a #${id} format`;
+    return updateFormatDto;
   }
 }
