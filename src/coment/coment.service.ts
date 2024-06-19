@@ -1,78 +1,36 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateComentDto } from './dto/create-coment.dto';
 import { UpdateComentDto } from './dto/update-coment.dto';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Coment } from './schemas/Coment.schemas';
 
 @Injectable()
 export class ComentService {
-  private comments = [
-    {
-      ID: 1,
-      fecha_creacion: '2024-05-23',
-      comentario: 'Este es el primer comentario.',
-      id_usuario: 12345,
-    },
-    {
-      ID: 2,
-      fecha_creacion: '2024-05-24',
-      comentario: 'Este es el segundo comentario.',
-      id_usuario: 54321,
-    },
-    {
-      ID: 3,
-      fecha_creacion: '2024-05-25',
-      comentario: 'Este es el tercer comentario.',
-      id_usuario: 98765,
-    },
-    {
-      ID: 4,
-      fecha_creacion: '2024-05-26',
-      comentario: 'Este es el cuarto comentario.',
-      id_usuario: 13579,
-    },
-  ];
+  constructor(@InjectModel(Coment.name) private comentModel: Model <Coment>) {}
 
-  create(createComentDto: CreateComentDto) {
-    const newComment = {
-      ID: this.comments.length + 1,
-      fecha_creacion: new Date().toISOString(),
-      comentario: createComentDto.comentario,
-      id_usuario: createComentDto.id_usuario,
-    };
-    this.comments.push(newComment);
-    return newComment;
+  create(CreateComentDto: CreateComentDto) {
+    const createdComent = new this.comentModel(CreateComentDto);
+    return createdComent.save();
   }
 
   findAll() {
-    return this.comments;
+    return this.comentModel.find().exec();
   }
 
-  findOne(id: number) {
-    const comment = this.comments.find((c) => c.ID === id);
-    if (!comment) {
-      throw new NotFoundException(`Comment with ID ${id} not found`);
-    }
-    return comment;
+  findOne(id: string) {
+    return this.comentModel.findById(id).exec();
   }
 
-  update(id: number, updateComentDto: UpdateComentDto) {
-    const index = this.comments.findIndex((c) => c.ID === id);
-    if (index === -1) {
-      throw new NotFoundException(`Comment with ID ${id} not found`);
-    }
-    this.comments[index] = { ...this.comments[index], ...updateComentDto };
-    return this.comments[index];
+  update(id: string, UpdateComentDto: UpdateComentDto) {
+    return this.comentModel
+      .findByIdAndUpdate(id, UpdateComentDto, {
+        new: true,
+      })
+      .exec();
   }
 
-  remove(id: number) {
-    const index = this.comments.findIndex((c) => c.ID === id);
-    if (index === -1) {
-      throw new NotFoundException(`Comment with ID ${id} not found`);
-    }
-    const [removedComment] = this.comments.splice(index, 1);
-    return removedComment;
-  }
-
-  partialUpdate(id: number, updateComentDto: UpdateComentDto) {
-    return this.update(id, updateComentDto); // Aquí puedes personalizar la lógica si es necesario
+  remove(id: string) {
+    return this.comentModel.findByIdAndDelete(id).exec();
   }
 }
