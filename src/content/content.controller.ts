@@ -19,20 +19,20 @@ export class ContentController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.contentService.findOne(+id);
+    return this.contentService.findOne(id);
   }
    @Put(':id') // Método PUT para actualizar el recurso completo
   update(@Param('id') id: string, @Body() updateContentDto: UpdateContentDto) {
-    return this.contentService.update(+id, updateContentDto);
+    return this.contentService.update(id, updateContentDto);
   }
 
   @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
   partialUpdate(@Param('id') id: string, @Body() updateContentDto: UpdateContentDto) {
-    return this.contentService.partialUpdate(+id, updateContentDto);
+    return this.contentService.update(id, updateContentDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.contentService.remove(+id);
+    return this.contentService.remove(id);
   }
 }

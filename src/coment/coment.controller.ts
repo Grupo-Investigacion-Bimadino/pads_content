@@ -19,21 +19,21 @@ export class ComentController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.comentService.findOne(+id);
+    return this.comentService.findOne('id');
   }
 
   @Put(':id') // Método PUT para actualizar el recurso completo
   update(@Param('id') id: string, @Body() updateComentDto: UpdateComentDto) {
-    return this.comentService.update(+id, updateComentDto);
+    return this.comentService.update(id, updateComentDto);
   }
 
   @Patch(':id') // Método PATCH para actualizar el recurso parcialmente
   partialUpdate(@Param('id') id: string, @Body() updateComentDto: UpdateComentDto) {
-    return this.comentService.partialUpdate(+id, updateComentDto);
+    return this.comentService.update(id, updateComentDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.comentService.remove(+id);
+    return this.comentService.remove(id);
   }
 }
