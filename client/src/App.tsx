@@ -367,7 +367,7 @@ export default function App() {
               Propuesta de Diseño de Software I, II y III • Módulo de Creación de Contenidos (CCE)
             </p>
             <p className="text-[10px] text-slate-400 mt-1">
-              Docente Titular: Alexander E. Toscano Ricarddo • Contribuidores: O. Madera, D. Cogollo, K. López, Romero • Grupo Bimadino
+              Docente Titular: Alexander E. Toscano Ricarddo • Contribuidores: O. Madera, D. Cogollo, K. López, E. Romero • Grupo Bimadino
             </p>
           </div>
 

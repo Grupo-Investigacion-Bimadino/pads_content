@@ -13,7 +13,7 @@ El **Componente de Contenido Educativo (CCE)** forma parte del proyecto de inves
   - **Oscar Madera Bolaño** ([@oscarbol09](https://github.com/oscarbol09))
   - **Dayana Cogollo Barba** ([@DayanaCB](https://github.com/DayanaCB))
   - **Katherine López Sierra** ([@KatherineLopez20](https://github.com/KatherineLopez20))
-  - **Romero** ([@Romero2002](https://github.com/Romero2002))
+  - **Eliana Romero Cuitiva** ([@Romero2002](https://github.com/Romero2002))
 - **Grupo de Investigación:** Bimadino (Universidad de Córdoba)
 - **Antecedentes Conceptuales:** J. Almanza, F. Galeano, J. Manjarrez, D. Luna, J. Valdelamar (Propuesta inicial de diseño).
 

@@ -38,6 +38,15 @@ export const CURRENT_USERS: User[] = [
     department: 'Lic. en Informática y Medios Audiovisuales',
   },
   {
+    id: 'usr_dev_4',
+    nickname: 'Romero2002',
+    name: 'Eliana Romero Cuitiva',
+    role: 'alumno',
+    email: 'eromerocuitiva98@correo.unicordoba.edu.co',
+    picture: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    department: 'Lic. en Informática y Medios Audiovisuales',
+  },
+  {
     id: 'usr_guest_1',
     nickname: 'InvitadoVisitante',
     name: 'Visitante Externo',
