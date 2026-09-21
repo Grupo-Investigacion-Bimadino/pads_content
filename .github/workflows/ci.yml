@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gate:
+    name: Build & Typecheck Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Root Dependencies
+        run: npm ci || npm install
+
+      - name: Build NestJS Backend
+        run: npm run build
+
+      - name: Install Client Dependencies
+        run: npm --prefix client ci || npm --prefix client install
+
+      - name: Typecheck Client (TypeScript Strict)
+        run: npm --prefix client run lint
+
+      - name: Build Client Frontend (Vite)
+        run: npm --prefix client run build

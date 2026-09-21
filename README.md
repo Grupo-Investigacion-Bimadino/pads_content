@@ -4,18 +4,18 @@ Plataforma web modular para la gestión, estructuración, visualización interac
 
 ---
 
-## Contexto Académico
+## Contexto Académico y Equipo
 
 El **Componente de Contenido Educativo (CCE)** forma parte del proyecto de investigación y desarrollo de software educativo del programa de **Licenciatura en Informática y Medios Audiovisuales (LIMA)** de la Universidad de Córdoba.
 
-- **Docente Titular:** Alexander Enrique Toscano Ricarddo
-- **Equipo de Autores e Investigadores:** 
-  - José Daniel Almanza Ávila
-  - Fabiam Galeano
-  - Jorge Manjarrez
-  - Darío Luna
-  - Jesús David Valdelamar
-- **Grupo de Investigación:** Bimadino
+- **Docente Titular y Coordinador:** Alexander Enrique Toscano Ricarddo
+- **Equipo de Desarrollo e Implementación (Contribuidores):**
+  - **Oscar Madera Bolaño** ([@oscarbol09](https://github.com/oscarbol09))
+  - **Dayana Cogollo Barba** ([@DayanaCB](https://github.com/DayanaCB))
+  - **Katherine López Sierra** ([@KatherineLopez20](https://github.com/KatherineLopez20))
+  - **Romero** ([@Romero2002](https://github.com/Romero2002))
+- **Grupo de Investigación:** Bimadino (Universidad de Córdoba)
+- **Antecedentes Conceptuales:** J. Almanza, F. Galeano, J. Manjarrez, D. Luna, J. Valdelamar (Propuesta inicial de diseño).
 
 ---
 
