@@ -22,9 +22,9 @@ export class ContentService {
     return this.contentModel.findById(id).exec();
   }
 
-  update(id: string, UpdateComentDto: UpdateContentDto) {
+  update(id: string, updateContentDto: UpdateContentDto) {
     return this.contentModel
-      .findByIdAndUpdate(id, UpdateContentDto, {
+      .findByIdAndUpdate(id, updateContentDto, {
         new: true,
       })
       .exec();
